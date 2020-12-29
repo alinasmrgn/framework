@@ -7,10 +7,10 @@ import org.openqa.selenium.support.PageFactory;
 
 public class AccountPage extends AbstractPageWithStaticUrl {
 
-    @FindBy(xpath = "//div[@class='box-content vcard my-info']//p[1]")
+    @FindBy(xpath = "//input[@class='input input_ht_sm form-default__item' and @name='NAME']")
     private WebElement userNameField;
 
-    @FindBy(xpath = "//div[@class='box-content vcard my-info']//span[@class='email']")
+    @FindBy(xpath = "//input[@class='input input_ht_sm form-default__item' and @name='EMAIL']")
     private WebElement userNameEmail;
 
     public AccountPage(WebDriver driver) {
@@ -20,7 +20,7 @@ public class AccountPage extends AbstractPageWithStaticUrl {
 
     @Override
     public AccountPage openPage() {
-        driver.get("https://www.vans.ru/customer/account/");
+        driver.get("https://aimclo.ru/personal/profile/");
         return this;
     }
 
