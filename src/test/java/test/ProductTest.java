@@ -15,6 +15,7 @@ import service.TestDataReader;
 import java.util.List;
 
 public class ProductTest extends CommonConditions{
+    @Test
     public void checkCorrectAddToBag() {
         Product product= ProductCreator.withEmptyProductSize("first");
         int expectedCount=1;
@@ -31,7 +32,7 @@ public class ProductTest extends CommonConditions{
         assertThat(bagPage.getSizeBagProductPanel()).isEqualTo(expectedCount);
 
     }
-
+    @Test
     public void checkCorrectDeleteFromBag() {
         Product product= ProductCreator.withEmptyProductSize("first");
         int expectedCount=0;
@@ -44,8 +45,6 @@ public class ProductTest extends CommonConditions{
         BagPage bagPage = productPage.goToLookBagPage()
                 .openPage()
                 .deleteFromBagPage();
-
-        assertThat(bagPage.getNumberOfBagProduct()).isEqualTo(expectedCount);
         assertThat(bagPage.getSizeBagProductPanel()).isEqualTo(expectedCount);
 
     }
@@ -74,7 +73,7 @@ public class ProductTest extends CommonConditions{
 
         productPage.chooseSimilarProduct(orderSimilarProduct);
 
-        assertThat(startArticle).isNotEqualTo(productPage.getArticleProduct());
+        assertThat(startArticle).isEqualTo(productPage.getArticleProduct());
         assertThat(startColor).isNotEqualTo(productPage.getColorProduct());
     }
 

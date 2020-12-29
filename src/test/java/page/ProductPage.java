@@ -55,7 +55,7 @@ public class ProductPage extends AbstractPageWithParameterizedUrl {
     }
 
     public ProductPage chooseSimilarProduct(int order){
-        similarProductList.findElements(By.xpath("container-check product-information__container-check")).get(order-1).click();
+        similarProductList.findElements(By.xpath("//div[@class='container-check product-information__container-check']")).get(order-1).click();
         return this;
     }
 

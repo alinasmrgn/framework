@@ -27,7 +27,7 @@ public class CatalogPage extends AbstractPageWithParameterizedUrl {
     }
 
     public CatalogPage clickToChooseFilterColor(String color) {
-        driver.findElement(By.xpath("//li[text()='Фильтры ']//span[@class='show']" +
+        driver.findElement(By.xpath("//li[text()='Фильтры ']//span[@class='show']/../..//" +
                 "label//p[contains(text(),'"+color+"')]")).click();
 
         return this;
@@ -46,7 +46,7 @@ public class CatalogPage extends AbstractPageWithParameterizedUrl {
     }
 
     public CatalogPage clickToChooseCategoryProduct(String category) {
-        driver.findElement(By.xpath("//div[@class='navigation-catalogue is_stuck']" +
+        driver.findElement(By.xpath("//div[@class='navigation-catalogue']/../..//" +
                 "li//a[contains(text(),'"+category+"')]")).click();
         return this;
     }

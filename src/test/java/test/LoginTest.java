@@ -20,7 +20,7 @@ public class LoginTest extends CommonConditions{
         String currentUrl=loginPage.getCurrentUrl();
         loginPage.clickSubmitButton();
 
-        assertThat(loginPage.getCurrentUrl()).isNotEqualTo(currentUrl);
+        assertThat(loginPage.getCurrentUrl()).isEqualTo(currentUrl);
 
         AccountPage accountPage= loginPage.clickGoToAccountPageButton();
 
