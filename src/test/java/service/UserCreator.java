@@ -20,10 +20,4 @@ public class UserCreator {
                 TestDataReader.getTestData(USER_EMAIL));
     }
 
-    public static User withEmptyPlaceOfLife(){
-        return new User(TestDataReader.getTestData(USER_NAME),
-                TestDataReader.getTestData(USER_PASSWORD),
-                TestDataReader.getTestData(USER_PHONE_NUMBER),
-                TestDataReader.getTestData(USER_EMAIL));
-    }
 }
